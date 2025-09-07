@@ -45,5 +45,21 @@
             Don't have an account? <a href="#">Sign up</a>
         </div>
     </div>
+    
+    <script>
+    const passwordField = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+    const toggleIcon = togglePassword.querySelector("i");
+
+    togglePassword.addEventListener("click", () => {
+        const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+        passwordField.setAttribute("type", type);
+
+        // Toggle eye / eye-slash icon
+        toggleIcon.classList.toggle("fa-eye");
+        toggleIcon.classList.toggle("fa-eye-slash");
+    });
+</script>
+
 </body>
 </html>
